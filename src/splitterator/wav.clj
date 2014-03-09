@@ -61,7 +61,7 @@
                               (.isBigEndian audio-format)))))
 
 ; writes a mono 16-bit wav file from a seq of floats
-(defn write-mono-wav [sq path]
+(defn write-mono-wav [path sq]
   (AudioSystem/write (-> (map float-sample-to-short sq)
                          short-array
                          (short-to-byte-array false)

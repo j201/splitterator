@@ -1,6 +1,7 @@
 (ns splitterator.fft
   (:import Fft.Fft)
-  (:use [splitterator.complex :as complex]))
+  (:use [splitterator.complex :as complex]
+        splitterator.utils))
 
 ; data is a seq of cplx
 (defn fft [data]
@@ -11,4 +12,9 @@
       (map complex/cplx re-arr im-arr))))
 
 (defn ifft [data]
-  (fft (map complex/swap data)))
+  (prn (apply max (map complex/magnitude data)))
+  (let [N (count data)]
+    (map complex/swap
+         (fft (map (fn [cplx]
+                     (complex/swap (map-vals #(/ % N) cplx)))
+                   data)))))

@@ -1,32 +1,6 @@
 # splitterator
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar splitterator-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+The current goal of this is to train an automaton to split audio tracks containing two voices into different tracks each with one voice. It might be useful for something, I guess.
 
 ## License
 

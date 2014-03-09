@@ -7,3 +7,5 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
+/samples
+test-out.wav
