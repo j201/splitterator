@@ -12,7 +12,6 @@
       (map complex/cplx re-arr im-arr))))
 
 (defn ifft [data]
-  (prn (apply max (map complex/magnitude data)))
   (let [N (count data)]
     (map complex/swap
          (fft (map (fn [cplx]
